@@ -1,4 +1,5 @@
 
+
 import 'package:basketball_points/screens/point%20screen.dart';
 import 'package:flutter/material.dart';
 class TeamsNames extends StatelessWidget {
@@ -55,25 +56,27 @@ class TeamsNames extends StatelessWidget {
             GestureDetector(
               onTap: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return PointScreen(teamA: _teamA.text, teamB: _teamB.text);
+                  return PointScreenState(teamA: _teamA.text, teamB: _teamB.text);
                 },));
               },
-              child: Container(
+              child: Align(
+                child: Container(
 
-                height: 65,
-                width: 100,
-                decoration: const BoxDecoration(
-                  color: Colors.orange,
-                  borderRadius: BorderRadius.all(Radius.circular(15)),
-                ),
+                  height: 65,
+                  width: 300,
+                  decoration: const BoxDecoration(
+                    color: Colors.orange,
+                    borderRadius: BorderRadius.all(Radius.circular(15)),
+                  ),
 
-                child:  const Center(
-                    child: Text('Start',
-                      style: TextStyle(fontSize: 30,
-                        color: Colors.white
-                      ),
+                  child:  const Center(
+                      child: Text('Start',
+                        style: TextStyle(fontSize: 30,
+                          color: Colors.white
+                        ),
 
-                    )
+                      )
+                  ),
                 ),
               ),
             )
